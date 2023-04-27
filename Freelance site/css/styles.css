@@ -1,0 +1,252 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box model */
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, #DFE9F3, var(--blanco) 100%);
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(122,122,122,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(122,122,122,1);
+    box-shadow: 0px 5px 15px 0px rgba(122,122,122,1);
+    background-color: var(--blanco);
+}
+
+/* Tipografía */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Titulos */
+.titulo span {
+    font-size: 2rem;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    color: var(--blanco);
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    width: 90%;
+    border-radius: .5rem;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+/* Navegacion principal */
+.nav_bg {
+    background-color: var(--secundario);
+}
+
+.navegacion_principal {
+    display: flex;
+    flex-direction: column;
+}
+
+.navegacion_principal a {
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.navegacion_principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+}
+
+/* Utilidades */
+.w_100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear_derecha {
+    justify-content: end;
+}
+
+/* Hero */
+.hero {
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido_hero {
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido_hero h2,
+.contenido_hero p {
+    color: var(--blanco);
+}
+
+.contenido_hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+.servicio p {
+    line-height: 2;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Contacto */
+.formulario {
+    background-color: var(--gris);
+    width: min( 60rem , 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    color: var(--primario);
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Campos del form */
+.contenedor_campos {
+    display: grid;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input_text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion_principal {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .boton {
+        width: auto;
+        margin-top: 4rem;
+    }
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+    .w_100 {
+        width: auto;
+    }
+    .contenedor_campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
+}

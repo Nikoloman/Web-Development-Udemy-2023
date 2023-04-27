@@ -1,0 +1,200 @@
+:root {
+    --headingFont: 'PT Sans', sans-serif;
+    --paragraphFont: 'Open Sans', sans-serif;
+
+    --primaryColor: #784D3C;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--paragraphFont);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/* ---- Globals ---- */
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--headingFont);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Utilities */
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.center-text {
+    text-align: center;
+}
+
+/* ---- Header ---- */
+.header {
+    background-image: url(../img/banner.jpg);
+    height: 50rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__text {
+    text-align: center;
+    color: white;
+    margin-top: 5.5rem;
+}
+
+.logo {
+    color: white;
+}
+
+.logo__name {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 700;
+}
+
+.bar {
+    padding-top: 2rem;
+}
+
+
+/* Navigation */
+.navigation__link {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* ---- Main ---- */
+
+/* Contact */
+.contact-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+
+/* Form */
+
+.form {
+    background-color: white;
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+    border-radius: 2rem;
+}
+
+.field {
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.field__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.field__input {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+}
+
+.field__input--textarea {
+    height: 20rem;
+}
+
+.button{
+    display: block;
+    font-family: var(--headingFont);
+    color: white;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.secondary-button {
+    background-color: var(--primaryColor);
+}
+
+
+/* ---- Footer ---- */
+.footer {
+    background-color: black;
+    padding: 3rem 0;
+    width: 100%;
+    margin-top: 4rem;
+}
+
+/* ---- Media queries ---- */
+@media (min-width: 768px) {
+    .header__text {
+        margin-top: 13rem;
+    }
+    .bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2rem;
+    }
+    .navigation {
+        display: flex;
+        gap: 2rem;
+    }
+}
